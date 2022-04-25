@@ -11,6 +11,20 @@ const Home = () => {
      <div className="container" style={{ backgroundImage: `url(${bg})` }}>
       <div className="containerGradient"></div>
      </div>
+
+     <div className="topBanner">
+      <div>
+        <img className="logo" src={logo} alt="logo"></img>  
+      </div>
+      <div className="tabs">
+        <div className="selected">Places To Stay</div>
+        <div>Experiences</div>
+        <div>Online Experiences</div>
+      </div>
+      <div className="lrContainers">
+
+      </div>
+     </div>
     </>
   );
 };
