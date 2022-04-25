@@ -3,6 +3,7 @@ import "./Home.css";
 import { Link } from "react-router-dom";
 import bg from "../images/frontpagebg.png";
 import logo from "../images/airbnb.png";
+import {ConnectButton} from "web3uikit"
 
 const Home = () => {
 
@@ -22,7 +23,7 @@ const Home = () => {
         <div>Online Experiences</div>
       </div>
       <div className="lrContainers">
-
+        <ConnectButton />
       </div>
      </div>
     </>
