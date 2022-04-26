@@ -3,7 +3,7 @@ import "./Home.css";
 import { Link } from "react-router-dom";
 import bg from "../images/frontpagebg.png";
 import logo from "../images/airbnb.png";
-import {ConnectButton} from "web3uikit"
+import {ConnectButton, Select} from "web3uikit"
 
 const Home = () => {
 
@@ -30,6 +30,28 @@ const Home = () => {
       <div className="searchFields">
       <div className="inputs">
         Location
+        <Select
+            defaultOptionIndex={0}
+            onChange={(data) => console.log(data.label)}
+            options={[
+                {
+                  id: "ny",
+                  label: "New York"
+                },
+                {
+                  id: "lon",
+                  label: "London"
+                },
+                {
+                  id: "db",
+                  label: "Dubai"
+                },
+                {
+                  id: "la",
+                  label: "Los Angeles"
+                }
+            ]}
+        />
       </div>
 
       <div className="vl" />
