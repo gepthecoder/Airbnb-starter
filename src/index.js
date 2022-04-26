@@ -7,7 +7,9 @@ import { BrowserRouter } from "react-router-dom";
 import { MoralisProvider } from "react-moralis";
 import { NotificationProvider } from 'web3uikit';
 
+// wraps the whole app to moralis provider
 
+// NotificationProvider => web3uikit
 
 ReactDOM.render(
   <React.StrictMode>
