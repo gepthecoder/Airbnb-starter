@@ -3,7 +3,7 @@ import "./Home.css";
 import { Link } from "react-router-dom";
 import bg from "../images/frontpagebg.png";
 import logo from "../images/airbnb.png";
-import {ConnectButton, Select} from "web3uikit"
+import {ConnectButton, Select, DatePicker} from "web3uikit"
 
 const Home = () => {
 
@@ -57,11 +57,19 @@ const Home = () => {
       <div className="vl" />
       <div className="inputs">
         Check In
+        <DatePicker
+          id="CheckIn"
+          onChange={(event) => console.log(event)}
+        />
       </div>
 
       <div className="vl" />
       <div className="inputs">
         Check Out
+         <DatePicker
+          id="CheckOut"
+          onChange={(event) => console.log(event)}
+        />
       </div>
 
       <div className="vl" />
