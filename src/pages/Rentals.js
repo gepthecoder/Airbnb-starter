@@ -8,6 +8,7 @@ import RentalsMap from "../components/RentalsMap";
 import { useState, useEffect } from "react";
 
 import { useMoralis, useWeb3ExecuteFunction } from "react-moralis"; // for executing smart contracts functions
+import User from "../components/User";
 
 // execution: every time we go to rentals page
 const Rentals = () => {
@@ -167,6 +168,9 @@ const Rentals = () => {
         </div>
       </div>
       <div className="lrContainers">
+        {account &&
+          <User account = {account} />  
+        }
         <ConnectButton />
       </div>
     </div>
