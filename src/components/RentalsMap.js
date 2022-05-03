@@ -8,10 +8,10 @@ function RentalsMap({locations, google, setHighLight}) {
   useEffect(()=> {
     var arr = Object.keys(locations);
     var getLat = (key) => locations[key]["lat"];
-    var avgLat = arr.reduce((a, c) => a + Number(getLat(c)), 0) / arr.lenght;
+    var avgLat = arr.reduce((a, c) => a + Number(getLat(c)), 0) / arr.length;
 
     var getLng = (key) => locations[key]["lng"];
-    var avgLng = arr.reduce((a, c) => a + Number(getLng(c)), 0) / arr.lenght;
+    var avgLng = arr.reduce((a, c) => a + Number(getLng(c)), 0) / arr.length;
 
     setCenter({lat:avgLat, lng:avgLng})
 
@@ -30,10 +30,10 @@ function RentalsMap({locations, google, setHighLight}) {
           center={center}
           initialCenter={locations[0]}
           zoom={13}
-          disableDefaultUI = {true}
+          disableDefaultUI={true}
         >
-          {locations.map((cords, i) => (
-            <Marker postion={cords} onClick={() => setHighLight(i)} />
+          {locations.map((coords, i) => (
+            <Marker postion={coords} onClick={() => setHighLight(i)} />
           ))}
         </Map>
       )}
